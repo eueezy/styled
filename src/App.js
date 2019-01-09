@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    padding: 0;
+    margin: 0;
+  }
+`;
 
 class App extends Component {
   render() {
@@ -7,6 +14,8 @@ class App extends Component {
       <Container>
         <Button>Hello</Button>
         <Button danger>Hello</Button>
+        <Anchor href="http://google.com">Go to google</Anchor>
+        <GlobalStyle />
       </Container>
     );
   }
@@ -35,25 +44,8 @@ const Container = styled.div`
   background-color: pink;
 `;
 
+const Anchor = styled(Button.withComponent("a"))`
+  text-decoration: none;
+`;
+
 export default App;
-
-/* 
-
-#2
-
-css file 대신 styled components를 import 
-
-styled-components -> 리액트는 css가 내부에 있는 컴포넌트를 줌
--> 컴포넌트가 이미 스타일이 있다는 뜻
-
-styled를 넣으려는 html 요소에 입력 (스타일링 하려는 html 요소)
-
-styled가 해당 css를 갖고 있는 버튼을 생성 -> 버튼 사용
-
-ex) 새로운 div에 스타일을 줘서 새로운 Container 생성
-
-
-component는 props를 가지고 있음
-
-
-*/

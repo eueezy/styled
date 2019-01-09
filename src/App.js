@@ -1,9 +1,25 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import "./App.css";
 
 class App extends Component {
   render() {
-    return <div className="App" />;
+    return (
+      <Fragment>
+        <Button danger />
+        <Button />
+      </Fragment>
+    );
   }
 }
 
+const Button = ({ danger }) => (
+  <button
+    className={danger ? "button button--success" : "button button--danger"}
+  >
+    Hello
+  </button>
+);
+
 export default App;
+
+//과거의 방식

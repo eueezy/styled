@@ -64,3 +64,10 @@ redux 처럼 처리
 -> theme 적용 -> theme provider 적용
 
 -> button은 4단계 아래에 있지만 theme적용 가능
+
+#7 Nesting
+
+sass에도 있음
+
+container 안의 모든 카드를 선택하고 싶다면?
+해당 엘리먼트를 레퍼런스

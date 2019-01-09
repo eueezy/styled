@@ -35,3 +35,20 @@ props로 스타일을 변경할 수 있음
 props가 클래스명 없이 스타일로 직접 가고 있음
 
 css를 쓴다면 컴포넌트에서 애니매이션 스피드를 변경할 수 없음
+
+#5 Extra attributes and mixins
+
+@ attributes를 바꾸려면? (custumed attributes)
+
+const Input = styled.input.attrs({
+required: true
+})`border-radius: 5px;`;
+
+@ mixins를 사용하는 법
+
+import css -> css 규칙을 그룹화하도록 도와줌
+
+awesomeCard -> css block
+
+button에 적용하려면 ->
+input에 \${awesomeCard} 추가

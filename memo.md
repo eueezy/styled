@@ -52,3 +52,15 @@ awesomeCard -> css block
 
 button에 적용하려면 ->
 input에 \${awesomeCard} 추가
+
+#6 Theming
+
+@ 모든 컴포넌트에 theme을 적용하려면?
+
+redux 처럼 처리
+
+3가지 레벨 : form card button
+
+-> theme 적용 -> theme provider 적용
+
+-> button은 4단계 아래에 있지만 theme적용 가능
